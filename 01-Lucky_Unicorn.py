@@ -1,16 +1,18 @@
-def yes_no(question)
+def yes_no(question):
+  valid = False
+  while not valid:
+        response = input (question).lower()
 
-while show_instructions.lower() !="xxx"
+        if response == "yes" or response == "y":
+            response = "yes"
+            return response
 
-    show_instructions = input ("Have you played this game before").lower()
-
-        if show_instructions == "yes" or show_instructions == "y":
-        show_instructions = "yes"
-        print("program continues")
-
-        elif show_instructions == "no" or show_instructions == "n":
-        show_instructions = "no"
-        print("display instructions")
+        elif response == "no" or response == "n":
+            response = "no"
+            return response
 
         else:
-        print("Please answer yes / no")
+            print("Please answer yes / no")
+
+show_instructions = yes_no ("Have you played the game before?")
+print ("You chose {}".format (show_instructions))
